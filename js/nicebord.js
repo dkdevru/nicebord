@@ -39,7 +39,8 @@
             
             this.element.css({
                 'color': this.options.color,
-                'background-color': this.options.background
+                'background-color': this.options.background,
+                'position': 'relative'
             });
             
             
