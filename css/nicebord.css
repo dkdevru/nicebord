@@ -7,10 +7,9 @@ html,body
 }
 
 a {
-	display:block;
-	width:300px;
 	border:0px green solid;
 	text-align:center;
+	padding:10px;
 }
 
 .bord_top
@@ -18,7 +17,37 @@ a {
 	position:absolute;
 	width:100%;
 	height:2px;
-	color:#ccc;
+	background-color:#000;
 	top:0px;
 	left:0px;
+}
+
+.bord_left
+{
+	position:absolute;
+	width:2px;
+	height:100%;
+	background-color:#000;
+	top:0px;
+	left:0px;
+}
+
+.bord_right
+{
+	position:absolute;
+	width:2px;
+	height:100%;
+	background-color:#000;
+	top:0px;
+	right:0px;
+}
+
+.bord_bottom
+{
+	position:absolute;
+	width:100%;
+	height:2px;
+	background-color:#000;
+	bottom:0px;
+	right:0px;
 }

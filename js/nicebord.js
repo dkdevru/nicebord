@@ -50,14 +50,21 @@
             }*/
             
            //this.$elem.on('mouseenter', this.toggleModal);
-           this.$elem.on('mouseenter', $.proxy(this.toggleModal, this));
+           this.$elem.on('mouseenter', $.proxy(this.fadein_bord, this));
+           this.$elem.on('mouseleave', $.proxy(this.fadeout_bord, this));
            // this.element.bind('mouseenter', $.proxy(this.toggleModal, this));
            // return this;
         },
         
-        toggleModal: function() {
+        fadein_bord: function() {
         	//console.log('toggle' + this.defaults.container);
-        	 this.$elem.children().fadeIn();
+        	 this.$elem.children().stop().fadeIn();
+        	//return false;
+        },
+        
+        fadeout_bord: function() {
+        	//console.log('toggle' + this.defaults.container);
+        	 this.$elem.children().stop().fadeOut();
         	//return false;
         },
         
@@ -65,7 +72,7 @@
         	//console.log('other' + this.defaults.container);
             //var structure = '<section id="' + this.defaults.container.replace('#', '') + '">sadf</section>';
             
-        	 var bord_top = '<div id="bord_top"></div>';
+        	var bord_top = '<div class="bord_top"></div><div class="bord_left"></div><div class="bord_right"></div><div class="bord_bottom"></div>';
         	$(bord_top).appendTo(this.$elem).hide();
         },
         /*,
