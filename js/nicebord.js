@@ -65,6 +65,7 @@
         	//console.log('toggle' + this.defaults.container);
         	 this.$elem.children().stop().fadeOut();
         	//return false;
+        	 
         },
         
         _build: function() {
