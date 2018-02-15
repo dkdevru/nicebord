@@ -9,5 +9,16 @@ html,body
 a {
 	display:block;
 	width:300px;
-	border:1px green solid;
+	border:0px green solid;
+	text-align:center;
+}
+
+.bord_top
+{
+	position:absolute;
+	width:100%;
+	height:2px;
+	color:#ccc;
+	top:0px;
+	left:0px;
 }

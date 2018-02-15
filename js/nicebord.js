@@ -65,8 +65,8 @@
         	//console.log('other' + this.defaults.container);
             //var structure = '<section id="' + this.defaults.container.replace('#', '') + '">sadf</section>';
             
-        	 var structure = '<section>sadf</section>';
-        	$(structure).appendTo(this.$elem).hide();
+        	 var bord_top = '<div id="bord_top"></div>';
+        	$(bord_top).appendTo(this.$elem).hide();
         },
         /*,
         
