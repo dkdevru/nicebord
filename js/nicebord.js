@@ -57,13 +57,13 @@
         },
         
         fadein_bord: function() {
-        	 this.$elem.children().stop().fadeIn();
+        	 this.$elem.children().stop().animate({opacity:'1'},500);
         	//return false;
         },
         
         fadeout_bord: function() {
         	//console.log('toggle' + this.defaults.container);
-        	 this.$elem.children().stop().fadeOut();
+        	 this.$elem.children().stop().animate({opacity:'0'},200);
         	//return false;
         	 
         },
@@ -72,11 +72,9 @@
         	//console.log('other' + this.defaults.container);
             //var structure = '<section id="' + this.defaults.container.replace('#', '') + '">sadf</section>';
             
-        	var bord_top = '<div class="bord_top"></div>'
-        	+'<div class="bord_left"></div>
-        	+'<div class="bord_right"></div>
-        	+ '<div class="bord_bottom"></div>';
-        	$(bord_top).appendTo(this.$elem).hide();
+        	var bord_top = '<div class="bord_top"></div><div class="bord_left"></div><div class="bord_right"></div><div class="bord_bottom"></div>';
+        	//$(bord_top).appendTo(this.$elem).hide();
+        	$(bord_top).appendTo(this.$elem);
         },
         /*,
         

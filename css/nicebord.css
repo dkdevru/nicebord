@@ -25,6 +25,7 @@ a {
 	background-color:#000;
 	top:0px;
 	left:0px;
+	opacity:0;
 }
 
 .bord_left
@@ -35,6 +36,7 @@ a {
 	background-color:#000;
 	top:0px;
 	left:0px;
+	opacity:0;
 }
 
 .bord_right
@@ -45,6 +47,7 @@ a {
 	background-color:#000;
 	top:0px;
 	right:0px;
+	opacity:0;
 }
 
 .bord_bottom
@@ -55,4 +58,5 @@ a {
 	background-color:#000;
 	bottom:0px;
 	right:0px;
+	opacity:0;
 }
