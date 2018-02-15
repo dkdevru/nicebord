@@ -6,6 +6,11 @@ html,body
 	margin:0px;
 }
 
+.row
+{
+	padding:10px;
+}
+
 a {
 	border:0px green solid;
 	text-align:center;

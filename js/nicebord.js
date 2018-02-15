@@ -57,7 +57,6 @@
         },
         
         fadein_bord: function() {
-        	//console.log('toggle' + this.defaults.container);
         	 this.$elem.children().stop().fadeIn();
         	//return false;
         },
