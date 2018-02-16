@@ -70,6 +70,19 @@
 	        		        //day = "Sunday";
 	        		    	$(this).stop().animate({opacity:'1',width:'100%'},500);
 	        		        break;
+	        		    case 'bord_right':
+	        		    	$(this).stop().animate({opacity:'1',height:'100%'},500);
+	        		    	console.log('right');
+	        		        break;
+	        		        
+	        		    case 'bord_bottom':
+	        		    	$(this).stop().animate({opacity:'1',width:'100%'},500);
+	        		        break;
+	        		        
+	        		    case 'bord_left':
+	        		    	$(this).stop().animate({opacity:'1',height:'100%'},500);
+	        		        break;
+	        		        
 	        		}
         			//$(this).stop().animate({opacity:'1'},500);
     			}
@@ -88,10 +101,20 @@
     			{
         			switch ($(this).attr('class')) 
         			{
-	        		    case 'bord_top':
-	        		        //day = "Sunday";
+        			case 'bord_right':
+        		    	$(this).stop().animate({opacity:'0',height:'0%'},500);
+        		    	break;
+	        		case 'bord_top':
 	        		    	$(this).stop().animate({opacity:'0',width:'0%'},500);
 	        		        break;
+	        		        
+	        		 case 'bord_bottom':
+	        		    	$(this).stop().animate({opacity:'0',width:'0%'},500);
+	        		        break;
+	        		 case 'bord_left':
+	        		    	$(this).stop().animate({opacity:'0',height:'0%'},500);
+	        		        break;
+	        		    
 	        		}
         			//$(this).stop().animate({opacity:'1'},500);
     			}
