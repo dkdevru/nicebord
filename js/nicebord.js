@@ -57,22 +57,51 @@
         },
         
         fadein_bord: function() {
-        	 this.$elem.children().stop().animate({opacity:'1'},500);
+        	 //this.$elem.children().stop().animate({opacity:'1'},500);
+        	
+        	console.log(this.$elem.children());
+        	
+        	this.$elem.children().each(function(e,f){
+        		if ($(this).attr('rel') == 'bord')
+    			{
+        			switch ($(this).attr('class')) 
+        			{
+	        		    case 'bord_top':
+	        		        //day = "Sunday";
+	        		    	$(this).stop().animate({opacity:'1',width:'100%'},500);
+	        		        break;
+	        		}
+        			//$(this).stop().animate({opacity:'1'},500);
+    			}
+        	});
+        	
         	//return false;
         },
         
         fadeout_bord: function() {
         	//console.log('toggle' + this.defaults.container);
-        	 this.$elem.children().stop().animate({opacity:'0'},200);
+        	// this.$elem.children().stop().animate({opacity:'0'},200);
         	//return false;
+        	
+        	this.$elem.children().each(function(e,f){
+        		if ($(this).attr('rel') == 'bord')
+    			{
+        			switch ($(this).attr('class')) 
+        			{
+	        		    case 'bord_top':
+	        		        //day = "Sunday";
+	        		    	$(this).stop().animate({opacity:'0',width:'0%'},500);
+	        		        break;
+	        		}
+        			//$(this).stop().animate({opacity:'1'},500);
+    			}
+        	});
+        	
         	 
         },
         
         _build: function() {
-        	//console.log('other' + this.defaults.container);
-            //var structure = '<section id="' + this.defaults.container.replace('#', '') + '">sadf</section>';
-            
-        	var bord_top = '<div class="bord_top"></div><div class="bord_left"></div><div class="bord_right"></div><div class="bord_bottom"></div>';
+        	var bord_top = '<div class="bord_top" rel="bord"></div><div class="bord_right" rel="bord"></div><div class="bord_bottom" rel="bord"></div><div class="bord_left" rel="bord"></div>';
         	//$(bord_top).appendTo(this.$elem).hide();
         	$(bord_top).appendTo(this.$elem);
         },
