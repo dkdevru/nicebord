@@ -15,9 +15,9 @@
         
         /*for global events*/
         this.$elem = $(element);
+        /*for global events*/
         
         this.options = {
-            background: '#dedede',
             color: '#999'
         };
         
@@ -32,14 +32,13 @@
     		
     		init: function (options) {
         	
+    			//console.log(this.options.speed);
         	
             $.extend(this.options,/*this.defaults,*/ options);
             
             //console.log(this.defaults.container);
             
             this.element.css({
-                'color': this.options.color,
-                'background-color': this.options.background,
                 'position': 'relative'
             });
             
@@ -56,10 +55,7 @@
            // return this;
         },
         
-        fadein_bord: function() {
-        	 //this.$elem.children().stop().animate({opacity:'1'},500);
-        	
-        	console.log(this.$elem.children());
+        fadein_bord: function(options) {
         	
         	this.$elem.children().each(function(e,f){
         		if ($(this).attr('rel') == 'bord')
@@ -84,17 +80,12 @@
 	        		        break;
 	        		        
 	        		}
-        			//$(this).stop().animate({opacity:'1'},500);
     			}
         	});
         	
-        	//return false;
         },
         
-        fadeout_bord: function() {
-        	//console.log('toggle' + this.defaults.container);
-        	// this.$elem.children().stop().animate({opacity:'0'},200);
-        	//return false;
+        fadeout_bord: function(options) {
         	
         	this.$elem.children().each(function(e,f){
         		if ($(this).attr('rel') == 'bord')
@@ -116,7 +107,6 @@
 	        		        break;
 	        		    
 	        		}
-        			//$(this).stop().animate({opacity:'1'},500);
     			}
         	});
         	
@@ -124,21 +114,11 @@
         },
         
         _build: function() {
-        	var bord_top = '<div class="bord_top" rel="bord"></div><div class="bord_right" rel="bord"></div><div class="bord_bottom" rel="bord"></div><div class="bord_left" rel="bord"></div>';
+        	var bord_top = '<div class="bord_top" rel="bord" style="background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="background-color:' + this.options.color + '"></div>';
         	//$(bord_top).appendTo(this.$elem).hide();
         	$(bord_top).appendTo(this.$elem);
         },
-        /*,
         
-        color: function (color) {
-            this.options.color = color;
-            this.element.css('color', color);
-        },
-        
-        background: function (color) {
-            this.options.background = color;
-            this.element.css('background-color', color);
-        }*/
     };
 
     /*
