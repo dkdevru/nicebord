@@ -1,6 +1,6 @@
-# Project Title
+# Nicebord.js
 
-One Paragraph of project description goes here
+Create nice border animation in block elements
 
 ## Getting Started
 
