@@ -20,6 +20,7 @@
         this.options = {
             color: '#999',
             orientation: 'ckw',
+            size: '1'
         };
         
         this.init(options);
@@ -115,15 +116,18 @@
         },
         
         _build: function() {
+        	
+        	console.log(this.options.size);
+        	
         	switch (this.options.orientation) 
 			{
 			
 			case 'ckw':
-        	var bord_top = '<div class="bord_top" rel="bord" style="left:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="top:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="right:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="bottom:0px;background-color:' + this.options.color + '"></div>';
+        	var bord_top = '<div class="bord_top" rel="bord" style="height:' + this.options.size + 'px;left:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="width:' + this.options.size + 'px;top:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="height:' + this.options.size + 'px;right:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="width:' + this.options.size + 'px;bottom:0px;background-color:' + this.options.color + '"></div>';
         	break;
         	
 			case 'ackw':
-	        	var bord_top = '<div class="bord_top" rel="bord" style="right:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="bottom:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="left:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="top:0px;background-color:' + this.options.color + '"></div>';
+	        	var bord_top = '<div class="bord_top" rel="bord" style="height:' + this.options.size + 'px;right:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="width:' + this.options.size + 'px;bottom:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="height:' + this.options.size + 'px;left:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="width:' + this.options.size + 'px;top:0px;background-color:' + this.options.color + '"></div>';
 	        	break;
         	
 			}

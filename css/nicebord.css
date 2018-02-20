@@ -21,7 +21,6 @@ a {
 {
 	position:absolute;
 	width:0%;
-	height:2px;
 	top:0px;
 	opacity:0;
 }
@@ -29,7 +28,6 @@ a {
 .bord_right
 {
 	position:absolute;
-	width:2px;
 	height:0%;
 	right:0px;
 	opacity:0;
@@ -39,7 +37,6 @@ a {
 {
 	position:absolute;
 	width:0%;
-	height:2px;
 	bottom:0px;
 	opacity:0;
 }
@@ -47,7 +44,6 @@ a {
 .bord_left
 {
 	position:absolute;
-	width:2px;
 	height:0%;
 	left:0px;
 	opacity:0;
