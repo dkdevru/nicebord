@@ -18,7 +18,8 @@
         /*for global events*/
         
         this.options = {
-            color: '#999'
+            color: '#999',
+            orientation: 'ckw',
         };
         
         this.init(options);
@@ -114,8 +115,18 @@
         },
         
         _build: function() {
-        	var bord_top = '<div class="bord_top" rel="bord" style="background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="background-color:' + this.options.color + '"></div>';
-        	//$(bord_top).appendTo(this.$elem).hide();
+        	switch (this.options.orientation) 
+			{
+			
+			case 'ckw':
+        	var bord_top = '<div class="bord_top" rel="bord" style="left:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="top:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="right:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="bottom:0px;background-color:' + this.options.color + '"></div>';
+        	break;
+        	
+			case 'ackw':
+	        	var bord_top = '<div class="bord_top" rel="bord" style="right:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="bottom:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="left:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="top:0px;background-color:' + this.options.color + '"></div>';
+	        	break;
+        	
+			}
         	$(bord_top).appendTo(this.$elem);
         },
         
