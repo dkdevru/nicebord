@@ -30,13 +30,28 @@ $(document).ready(function(){
 	$('#first').nicebord();
 	//or
 	$('a').each(function() {
-		$(this).nicebord({color: '000',orientation: 'ckw',size:'3'});
+		$(this).nicebord({color: '000',orientation: 'ckw',size:3});
 	});
 });
 </script>
 </body>
 </html>
 ```
+## Options
+Here's a list of available settings.
+```
+$('#id').nicebord({
+color: '000',
+orientation: 'ckw',
+size:3
+});
+```
+| Attribute | Type | Default | Description
+| --- | --- | --- | --- |
+| `color` | String | '000000' | Set border color |
+| `orientation` | String | 'ckw' | Set direction animation: clockwise(ckw), anticlockwise(ackw) |
+| `size` | Number | 1 | Set border size |
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

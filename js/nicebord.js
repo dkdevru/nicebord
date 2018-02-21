@@ -1,7 +1,7 @@
 /*
  *  Project: jQuery plugin
  *  Author: Dmitriy Kozlov
- *  License: Unlicense
+ *  License: MIT License
  */
 
 ;(function ($, window, document, undefined) {
@@ -12,60 +12,41 @@
     var Plugin = function (element, options) {
     
         this.element = element;
-        
-        /*for global events*/
         this.$elem = $(element);
-        /*for global events*/
         
         this.options = {
             color: '#999',
             orientation: 'ckw',
-            size: '1'
+            size: 1
         };
         
         this.init(options);
     };
 
     Plugin.prototype = {
-        
-    		/*defaults: {
-                container: '#pageModal'
-            },*/
     		
     		init: function (options) {
         	
-    			//console.log(this.options.speed);
-        	
-            $.extend(this.options,/*this.defaults,*/ options);
-            
-            //console.log(this.defaults.container);
+            $.extend(this.options, options);
             
             this.element.css({
                 'position': 'relative'
             });
             
             
-            this._build();
-            /*if(!$(this.defaults.container).length) {
-                this._build();
-            }*/
-            
-           //this.$elem.on('mouseenter', this.toggleModal);
+           this._build();
            this.$elem.on('mouseenter', $.proxy(this.fadein_bord, this));
            this.$elem.on('mouseleave', $.proxy(this.fadeout_bord, this));
-           // this.element.bind('mouseenter', $.proxy(this.toggleModal, this));
-           // return this;
         },
         
         fadein_bord: function(options) {
         	
-        	this.$elem.children().each(function(e,f){
+        	this.$elem.children().each(function(){
         		if ($(this).attr('rel') == 'bord')
     			{
         			switch ($(this).attr('class')) 
         			{
 	        		    case 'bord_top':
-	        		        //day = "Sunday";
 	        		    	$(this).stop().animate({opacity:'1',width:'100%'},500);
 	        		        break;
 	        		    case 'bord_right':
@@ -89,7 +70,7 @@
         
         fadeout_bord: function(options) {
         	
-        	this.$elem.children().each(function(e,f){
+        	this.$elem.children().each(function(){
         		if ($(this).attr('rel') == 'bord')
     			{
         			switch ($(this).attr('class')) 
@@ -117,8 +98,6 @@
         
         _build: function() {
         	
-        	console.log(this.options.size);
-        	
         	switch (this.options.orientation) 
 			{
 			
@@ -136,15 +115,10 @@
         
     };
 
-    /*
-     * Plugin wrapper, preventing against multiple instantiations and
-     * return plugin instance.
-     */
     $.fn[pluginName] = function (options) {
 
         var plugin = this.data(dataKey);
 
-        // has plugin instantiated ?
         if (plugin instanceof Plugin) {
             // if have options arguments, call plugin.init() again
             if (typeof options !== 'undefined') {
