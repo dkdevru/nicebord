@@ -43,7 +43,9 @@ Here's a list of available settings.
 $('#id').nicebord({
 color: '000',
 orientation: 'ckw',
-size:3
+size:3,
+pos:'top',
+speed:500
 });
 ```
 | Attribute | Type | Default | Description
@@ -51,7 +53,7 @@ size:3
 | `color` | String | '000000' | Set border color |
 | `orientation` | String | 'ckw' | Set direction animation: clockwise(ckw), anticlockwise(ackw) |
 | `size` | Number | 1 | Set border size |
-| `pos` | String | 'top bottom' | Animate top or right or bottom or left border |
+| `pos` | String | 'top' | Animate top or right or bottom or left border |
 | `speed` | Number | 500 | Animation time |
 ## License
 
