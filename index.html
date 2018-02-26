@@ -15,19 +15,19 @@
 <div class='row'>
 
 <a href="#" id='first'>Nicebord</a>
-<a href="#">Test Test</a>
-<a href="#">Test Test Test</a>
+<!-- <a href="#">Test Test</a>
+<a href="#">Test Test Test</a>-->
 
 </div>
 
 
 <script>
 $(document).ready(function(){
-	$('#first').nicebord();	
+	$('#first').nicebord({color: '#000', orientation: 'ackw', size:3, pos:'bottom'});	
 	
-	$('a').each(function() {
-		$(this).nicebord({color: '000',orientation: 'ckw',size:3});
-	});
+	/*$('a').each(function() {
+		$(this).nicebord({color: '#000', orientation: 'ckw', size:3});
+	});*/
 });
 </script>
 
