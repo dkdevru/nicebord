@@ -17,7 +17,9 @@
         this.options = {
             color: '#999',
             orientation: 'ckw',
-            size: 1
+            size: 1,
+            pos: 'top,right,bottom,left',
+            speed : 500
         };
         
         this.init(options);
@@ -41,26 +43,47 @@
         
         fadein_bord: function(options) {
         	
+        	
+        	var pos = this.options.pos.split(",");
+        	var speed_in = this.options.speed;
+        	
         	this.$elem.children().each(function(){
         		if ($(this).attr('rel') == 'bord')
     			{
+        			
         			switch ($(this).attr('class')) 
         			{
 	        		    case 'bord_top':
-	        		    	$(this).stop().animate({opacity:'1',width:'100%'},500);
+	        		    	
+	        		    	var result_top = $.grep(pos, function(e){ return e == 'top'; });
+	        		    	if (result_top.length == 1)
+	        		    	{
+	        		    		$(this).stop().animate({opacity:'1',width:'100%'},speed_in);
+	        		    	}
 	        		        break;
 	        		    case 'bord_right':
-	        		    	$(this).stop().animate({opacity:'1',height:'100%'},500);
-	        		    	console.log('right');
-	        		        break;
+	        		    	var result_right = $.grep(pos, function(e){ return e == 'right'; });
+	        		    	if (result_right.length == 1)
+	        		    	{
+	        		    		$(this).stop().animate({opacity:'1',height:'100%'},speed_in);
+	        		    	}
+	        		    	break;
 	        		        
 	        		    case 'bord_bottom':
-	        		    	$(this).stop().animate({opacity:'1',width:'100%'},500);
-	        		        break;
+	        		    	var result_bottom = $.grep(pos, function(e){ return e == 'bottom'; });
+	        		    	if (result_bottom.length == 1)
+	        		    	{
+	        		    		$(this).stop().animate({opacity:'1',width:'100%'},speed_in);
+	        		    	}
+	        		    	break;
 	        		        
 	        		    case 'bord_left':
-	        		    	$(this).stop().animate({opacity:'1',height:'100%'},500);
-	        		        break;
+	        		    	var result_left = $.grep(pos, function(e){ return e == 'left'; });
+	        		    	if (result_left.length == 1)
+	        		    	{
+	        		    		$(this).stop().animate({opacity:'1',height:'100%'},speed_in);
+	        		    	}
+	        		    	break;
 	        		        
 	        		}
     			}
@@ -70,23 +93,25 @@
         
         fadeout_bord: function(options) {
         	
+        	var speed_in = this.options.speed;
+        	
         	this.$elem.children().each(function(){
         		if ($(this).attr('rel') == 'bord')
     			{
         			switch ($(this).attr('class')) 
         			{
         			case 'bord_right':
-        		    	$(this).stop().animate({opacity:'0',height:'0%'},500);
+        		    	$(this).stop().animate({opacity:'0',height:'0%'},speed_in);
         		    	break;
 	        		case 'bord_top':
-	        		    	$(this).stop().animate({opacity:'0',width:'0%'},500);
+	        		    	$(this).stop().animate({opacity:'0',width:'0%'},speed_in);
 	        		        break;
 	        		        
 	        		 case 'bord_bottom':
-	        		    	$(this).stop().animate({opacity:'0',width:'0%'},500);
+	        		    	$(this).stop().animate({opacity:'0',width:'0%'},speed_in);
 	        		        break;
 	        		 case 'bord_left':
-	        		    	$(this).stop().animate({opacity:'0',height:'0%'},500);
+	        		    	$(this).stop().animate({opacity:'0',height:'0%'},speed_in);
 	        		        break;
 	        		    
 	        		}
