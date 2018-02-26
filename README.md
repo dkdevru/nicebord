@@ -41,12 +41,12 @@ $(document).ready(function(){
 Here's a list of available settings.
 ```
 $('#id').nicebord({
-color: '000',
-orientation: 'ckw',
-size:3,
-pos:'top',
-speed:500
-});
+		color: '#000',
+		orientation: 'ackw',
+		size:3,
+		pos:'bottom',
+		speed:500
+		});
 ```
 | Attribute | Type | Default | Description
 | --- | --- | --- | --- |
