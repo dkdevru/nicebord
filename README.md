@@ -51,7 +51,8 @@ size:3
 | `color` | String | '000000' | Set border color |
 | `orientation` | String | 'ckw' | Set direction animation: clockwise(ckw), anticlockwise(ackw) |
 | `size` | Number | 1 | Set border size |
-
+| `pos` | String | 'top bottom' | Animate top or right or bottom or left border |
+| `speed` | Number | 500 | Animation time |
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
