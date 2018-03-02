@@ -1,13 +1,16 @@
 # Setup
 title:        Project or Site name
 tagline:      jQuery Plugin for animate border
+=======
+title:        Nicebord.js
+tagline:      A responsive theme for your project on GitHub Pages:
 baseurl:      "/nicebord"
 paginate:     1
 locale:       "en"
 
 # About/contact
 author:
-  name:       Author name
+  name:       Dmitriy Kozlov
   url:        http://yourhomepage.com 
 
 # Gems
