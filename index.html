@@ -1,17 +1,13 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>index.html</title><script type="text/javascript">
-//<![CDATA[
-window.__cfRocketOptions = {byc:0,p:0,petok:"4b9923b805660892821a8648881e1c2c35a0f8c0-1519999717-1800"};
-//]]>
-</script>
-<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/935cb224/cloudflare-static/rocket.min.js"></script>
-<style></style></head><body id="preview">
-<hr>
-<p>layout: default<br>
-title: {{ <a href="http://site.name">site.name</a> }}</p>
-<hr>
-<p>&lt;div id=“home”&gt;<br>
-&lt;h1&gt;Nicebord.js&lt;/h1&gt;</p>
-<h2><a id="Example_use_7"></a>Example use</h2>
-<p>&lt;/div&gt;</p>
+---
+layout: default
+title: {{ site.name }}
+---
 
-</body></html>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
