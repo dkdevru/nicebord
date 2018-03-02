@@ -1,7 +1,4 @@
 # Setup
-title:        Project or Site name
-tagline:      jQuery Plugin for animate border
-=======
 title:        Nicebord.js
 tagline:      jQuery plugin for animate border
 baseurl:      "/nicebord"
@@ -10,7 +7,7 @@ locale:       "en"
 
 # About/contact
 author:
-  name:       Dmitriy Kozlov
+  name:       Author name
   url:        http://yourhomepage.com 
 
 # Gems
