@@ -1,6 +1,6 @@
 # Setup
 title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+tagline:      jQuery Plugin for animate border
 baseurl:      "/nicebord"
 paginate:     1
 locale:       "en"
