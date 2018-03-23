@@ -1,16 +1,25 @@
----
-layout: default
-title: {{ site.name }}
----
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>index.html</title><script type="text/javascript">
+//<![CDATA[
+window.__cfRocketOptions = {byc:0,p:1521556077,petok:"60e92c08efa88c4be6b299abeb82bf341b3d502f-1521797168-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/935cb224/cloudflare-static/rocket.min.js"></script>
+<style></style></head><body id="preview">
+<hr>
+<p>layout: default<br>
+title: {{ <a href="http://site.name">site.name</a> }}</p>
+<hr>
+<h2><a id="Nicebordjs_5"></a>Nicebord.js</h2>
+<p>Create nice border animation in block elements</p>
+<h2><a id="License_9"></a>License</h2>
+<p>The plugin is under MIT License</p>
+<h2><a id="Quickstart_13"></a>Quickstart</h2>
+<p>Include jQuery and timelineMe css and js in your project:</p>
+<pre><code>{% for post in site.posts %}
+</code></pre>
+<ul>
+<li>{{ post.date | date_to_string }} &gt;&gt;[{{ post.title }}]({{ site.baseurl }}{{ post.url }})<br>
+{% endfor %}</li>
+</ul>
 
-<div id="home">
-  <h2>Nicebord.js</h2>
-  <p>Create nice border animation in block elements</p>
-  <h2>License</h2>
-  <p>The plugin is under MIT License</p>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+</body></html>
