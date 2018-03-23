@@ -4,7 +4,10 @@ title: {{ site.name }}
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
+  <h2>Nicebord.js</h2>
+  <p>Create nice border animation in block elements</p>
+  <h2>License</h2>
+  <p>The plugin is under MIT License</p>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
