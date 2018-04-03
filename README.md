@@ -22,16 +22,21 @@ Include plugin's CSS and JS:
 </head>
 
 <body>
-<a href="#" id='first'>Nicebord</a>
-<a href="#">Test Test</a>
-<a href="#">Test Test Test</a>
+<a href="#" id="first">Nicebord</a>
+
+<a href="#" class="nice">Nicebord</a>
+<a href="#" class="nice">Nicebord Nicebord</a>
 <script>
 $(document).ready(function(){
 	$('#first').nicebord();
-	//or
-	$('a').each(function() {
-		$(this).nicebord({color: '000',orientation: 'ckw',size:3});
-	});
+	//or class
+	$('.nice').nicebord({
+		color: '#000',
+		orientation: 'ackw',
+		size:3,
+		pos:'bottom',
+		speed:500
+		});
 });
 </script>
 </body>

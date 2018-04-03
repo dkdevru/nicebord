@@ -14,9 +14,10 @@
 
 <div class='row'>
 
-<a href="#" id='first'>Nicebord</a>
-<!-- <a href="#">Test Test</a>
-<a href="#">Test Test Test</a>-->
+<a href="#" id="first">Nicebord</a>
+
+<a href="#" class="nice">Nicebord</a>
+<a href="#" class="nice">Nicebord Nicebord</a>
 
 </div>
 
@@ -24,15 +25,19 @@
 $(document).ready(function(){
 	$('#first').nicebord({
 		color: '#000',
+		orientation: 'ckw',
+		size:5,
+		pos:'top',
+		speed:100
+		});
+	
+	$('.nice').nicebord({
+		color: '#000',
 		orientation: 'ackw',
 		size:3,
 		pos:'bottom',
 		speed:500
 		});
-	
-	/*$('a').each(function() {
-		$(this).nicebord({color: '#000', orientation: 'ckw', size:3});
-	});*/
 });
 </script>
 

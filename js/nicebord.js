@@ -142,19 +142,23 @@
 
     $.fn[pluginName] = function (options) {
 
-        var plugin = this.data(dataKey);
+    	 return this.each(function()
+    			    {
+    			        var elem = $(this);
 
-        if (plugin instanceof Plugin) {
-            // if have options arguments, call plugin.init() again
-            if (typeof options !== 'undefined') {
-                plugin.init(options);
-            }
-        } else {
-            plugin = new Plugin(this, options);
-            this.data(dataKey, plugin);
-        }
-        
-        return plugin;
+    			        var plugin = elem.data(dataKey);
+
+    			        if (plugin instanceof Plugin) {
+    			            // if have options arguments, call plugin.init() again
+    			            if (typeof options !== 'undefined') {
+    			                plugin.init(options);
+    			            }
+    			        } else {
+    			            plugin = new Plugin(elem, options);
+    			            elem.data(dataKey, plugin);
+    			        }
+    			        
+    			    });
     };
 
 }(jQuery, window, document));
