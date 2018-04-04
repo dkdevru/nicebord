@@ -11,17 +11,6 @@ html,body
 	padding:20px;
 }
 
-a {
-	border:0px green solid;
-	text-align:center;
-	padding:10px;
-	font-family:Arial,sans-serif;
-	color:#000;
-	text-decoration:none;
-	font-weight:bold;
-	letter-spacing:1px;
-}
-
 .bord_top
 {
 	position:absolute;
