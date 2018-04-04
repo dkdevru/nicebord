@@ -51,7 +51,7 @@ $('#id').nicebord({
 		size:3,
 		pos:'bottom',
 		speed:500,
-		
+		direction:false
 		});
 ```
 | Attribute | Type | Default | Description
@@ -61,7 +61,7 @@ $('#id').nicebord({
 | `size` | Number | 1 | Set border size |
 | `pos` | String | 'top,right,bottom,left' | Animate top or right or bottom or left border |
 | `speed` | Number | 500 | Animation time |
-| `direction` | boolean | false | Direction of animation, if false the animation occurs along the sides of the element, if true the inside of the element  |
+| `direction` | Boolean | false | Direction of animation, if false the animation occurs along the sides of the element, if true the inside of the element  |
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
