@@ -50,7 +50,8 @@ $('#id').nicebord({
 		orientation: 'ackw',
 		size:3,
 		pos:'bottom',
-		speed:500
+		speed:500,
+		
 		});
 ```
 | Attribute | Type | Default | Description
@@ -58,8 +59,9 @@ $('#id').nicebord({
 | `color` | String | '000000' | Set border color |
 | `orientation` | String | 'ckw' | Set direction animation: clockwise(ckw), anticlockwise(ackw) |
 | `size` | Number | 1 | Set border size |
-| `pos` | String | 'top' | Animate top or right or bottom or left border |
+| `pos` | String | 'top,right,bottom,left' | Animate top or right or bottom or left border |
 | `speed` | Number | 500 | Animation time |
+| `direction` | boolean | false | Direction of animation, if false the animation occurs along the sides of the element, if true the inside of the element  |
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
