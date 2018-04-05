@@ -19,7 +19,7 @@ title: {{ site.name }}
   Include jQuery and Nicebord css and js in your project:
   
   <pre>
-  <code>
+  <code class="html">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <link rel="stylesheet" href="path/to/nicebord.css">
 <script src="path/to/nicebord.js"></script>
@@ -32,11 +32,3 @@ title: {{ site.name }}
     {% endfor %}
   </ul>-->
 </div>
-
-<script>
-$(document).ready(function() {
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-});
-</script>
