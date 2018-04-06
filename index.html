@@ -26,10 +26,78 @@ title: {{ site.name }}
 
   </code>
 </pre>
+
+<h2>Options</h2>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color</code></td>
+<td>String</td>
+<td>'000000'</td>
+<td>Set border color</td>
+</tr>
+<tr>
+<td><code>orientation</code></td>
+<td>String</td>
+<td>'ckw'</td>
+<td>Set direction animation: clockwise(ckw), anticlockwise(ackw)</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>Number</td>
+<td>1</td>
+<td>Set border size</td>
+</tr>
+<tr>
+<td><code>pos</code></td>
+<td>String</td>
+<td>'top,right,bottom,left'</td>
+<td>Animate top or right or bottom or left border</td>
+</tr>
+<tr>
+<td><code>speed</code></td>
+<td>Number</td>
+<td>500</td>
+<td>Animation time</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td>Boolean</td>
+<td>false</td>
+<td>Direction of animation, if false the animation occurs along the sides of the element, if true the inside of the element</td>
+</tr></tbody></table>
   
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <h2>Examples</h2>
+  <h3>Default</h3>
+    <pre>
+  <code class="html">
+  &lt;a href="#" id="first">Nicebord&lt;/a>
+  </code>
+  </pre>
+  
+      <pre>
+  <code class="javascript">
+  $(document).ready(function(){
+	 $('#first').nicebord();
+  });
+  </code>
+  </pre>
+
+ <a href="#" id="first">Nicebord</a>
+
+ <script type="text/javascript">
+  $(document).ready(function(){
+	 $('#first').nicebord();
+  });
+  </script>  
+
 </div>
