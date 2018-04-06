@@ -94,9 +94,86 @@ title: {{ site.name }}
 
  <a href="#" id="first">Nicebord</a>
 
- <script type="text/javascript">
+
+  
+  <h3>Horizontal menu</h3>
+
+<pre>
+  <code class="html">
+  &lt;a href="#" class="nice">Link 1&lt;/a>
+  &lt;a href="#" class="nice">Link 2&lt;/a>
+  &lt;a href="#" class="nice">Link 3&lt;/a>
+  &lt;a href="#" class="nice">Link 4&lt;/a>
+  </code>
+  </pre>
+  
+       <pre>
+  <code class="javascript">
+  $(document).ready(function(){
+	 
+	 $('.nice').nicebord({
+		color: '#000',
+		orientation: 'ckw',
+		size:3,
+		pos:'bottom',
+		speed:300
+		});
+		
+  });
+  </code>
+  </pre>
+  
+    <h3>Vertical menu</h3>
+
+<pre>
+  <code class="html">
+  &lt;ul>
+   &lt;li> &lt;a href="#" class="nicev">Link 1&lt;/a>&lt;/li>
+   &lt;li> &lt;a href="#" class="nicev">Link 2&lt;/a>&lt;/li>
+   &lt;li> &lt;a href="#" class="nicev">Link 3&lt;/a>&lt;/li>
+   &lt;li> &lt;a href="#" class="nicev">Link 4&lt;/a>&lt;/li>
+  &lt;/ul>
+  </code>
+  </pre>
+  
+       <pre>
+  <code class="javascript">
+  $(document).ready(function(){
+	 
+	 $('.nicev').nicebord({
+		color: '#000',
+		orientation: 'ckw',
+		size:3,
+		pos:'left',
+		speed:300
+		});
+		
+  });
+  </code>
+  </pre>
+  
+  
+  
+   <script type="text/javascript">
   $(document).ready(function(){
 	 $('#first').nicebord();
+	 
+	 $('.nice').nicebord({
+			color: '#000',
+			orientation: 'ckw',
+			size:3,
+			pos:'bottom',
+			speed:300
+			});
+	 
+	 $('.nicev').nicebord({
+			color: '#000',
+			orientation: 'ckw',
+			size:3,
+			pos:'left',
+			speed:300
+			});
+	 
   });
   </script>  
 
