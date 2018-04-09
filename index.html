@@ -165,6 +165,34 @@ title: {{ site.name }}
    <li style="padding:15px;padding-left:25px;"><a href="#" class="nicev">Vertical menuLink 4</a></li>
   </ul>
   
+  <h3>Inner direction menu</h3>
+  
+  <pre>
+  <code class="html">
+  &lt;a href="#" class="niced">Link 1&lt;/a>
+  &lt;a href="#" class="niced">Link 2&lt;/a>
+  &lt;a href="#" class="niced">Link 3&lt;/a>
+  &lt;a href="#" class="niced">Link 4&lt;/a>
+  </code>
+  </pre>
+  
+         <pre>
+  <code class="javascript">
+  $(document).ready(function(){
+	 
+	 $('.niced').nicebord({
+		color: '#567482',
+		orientation: 'ackw',
+		size:3,
+		pos:'top,right,bottom,left',
+		speed:300,
+		direction:true
+		});
+		
+  });
+  </code>
+  </pre>
+  
   
   
    <script type="text/javascript">
@@ -185,6 +213,15 @@ title: {{ site.name }}
 			size:3,
 			pos:'left',
 			speed:300
+			});
+	 
+	 $('.niced').nicebord({
+			color: '#567482',
+			orientation: 'ackw',
+			size:3,
+			pos:'top,right,bottom,left',
+			speed:300,
+			direction:true
 			});
 	 
   });
