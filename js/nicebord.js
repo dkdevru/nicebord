@@ -20,7 +20,8 @@
             size: 3,
             pos: 'top,right,bottom,left',
             speed : 200,
-            direction: false
+            direction: false,
+            fix: false
         };
         
         this.init(options);
@@ -148,9 +149,18 @@
         
         _build: function() {
         	
+        	if (this.options.fix === true){
+        		var tag = this.$elem.children().prop("tagName");
+        		if (tag == 'IMG')
+        			{
+        			var w = this.$elem.children()[0].width;
+        			var h = this.$elem.children()[0].height;
+        			this.$elem.css('display','block').css('width', w + 'px').css('height', h + 'px').css('padding','0px');
+        			}
+        	}
+        	
         	switch (this.options.orientation) 
 			{
-			
 			case 'ckw':
 				if (this.options.direction === false){
         	var bord_top = '<div class="bord_top" rel="bord" style="height:' + this.options.size + 'px;left:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="width:' + this.options.size + 'px;top:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="height:' + this.options.size + 'px;right:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="width:' + this.options.size + 'px;bottom:0px;background-color:' + this.options.color + '"></div>';
@@ -161,9 +171,12 @@
         	break;
         	
 			case 'ackw':
-	        	var bord_top = '<div class="bord_top" rel="bord" style="height:' + this.options.size + 'px;right:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="width:' + this.options.size + 'px;bottom:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="height:' + this.options.size + 'px;left:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="width:' + this.options.size + 'px;top:0px;background-color:' + this.options.color + '"></div>';
+				if (this.options.direction === false){
+	        	var bord_top = '<div class="bord_top" rel="bord" style="height:' + this.options.size + 'px;right:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="width:' + this.options.size + 'px;bottom:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="height:' + this.options.size + 'px;left:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="width:' + this.options.size + 'px;top:0px;background-color:' + this.options.color + '"></div>';}
+	        	else if( this.options.direction === true ){
+					var bord_top = '<div class="bord_top" rel="bord" style="width:100%;height:0px;left:0px;background-color:' + this.options.color + '"></div><div class="bord_right" rel="bord" style="width:0px;height:100%;top:0px;background-color:' + this.options.color + '"></div><div class="bord_bottom" rel="bord" style="height:0px;width:100%;right:0px;background-color:' + this.options.color + '"></div><div class="bord_left" rel="bord" style="width:0px;height:100%;bottom:0px;background-color:' + this.options.color + '"></div>';
+					}
 	        	break;
-        	
 			}
         	$(bord_top).appendTo(this.$elem);
         },

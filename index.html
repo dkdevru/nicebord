@@ -21,6 +21,19 @@
 
 </div>
 
+<div class='row'>
+<a href='#' class='aimg'><img src='./images/100.png'/></a>
+<a href='#' class='aimg'><img src='./images/100.png'/></a>
+</div>
+
+<style type="text/css">
+.aimg
+{
+float:left;
+margin:10px;
+}
+</style>
+
 <script>
 $(document).ready(function(){
 	$('#first').nicebord({
@@ -38,6 +51,15 @@ $(document).ready(function(){
 		size:3,
 		pos:'top,bottom',
 		speed:500
+		});
+	
+	$('.aimg').nicebord({
+		color: '#000',
+		orientation: 'ckw',
+		size:5,
+		speed:200,
+		direction:true,
+		fix:true
 		});
 });
 </script>
