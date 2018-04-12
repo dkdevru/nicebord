@@ -35,7 +35,9 @@ $(document).ready(function(){
 		orientation: 'ackw',
 		size:3,
 		pos:'bottom',
-		speed:500
+		speed:500,
+		direction:false,
+		fix:false
 		});
 });
 </script>
@@ -51,7 +53,8 @@ $('#id').nicebord({
 		size:3,
 		pos:'bottom',
 		speed:500,
-		direction:false
+		direction:false,
+		fix:false
 		});
 ```
 | Attribute | Type | Default | Description
@@ -62,6 +65,8 @@ $('#id').nicebord({
 | `pos` | String | 'top,right,bottom,left' | Animate top or right or bottom or left border |
 | `speed` | Number | 500 | Animation time |
 | `direction` | Boolean | false | Direction of animation, if false the animation occurs along the sides of the element, if true the inside of the element  |
+| `fix` | Boolean | false | Sets the fixed size of the element to which nicebord is applied. Usually images.  |
+
 
 ## Demo
 See demo [project page](https://dkdevru.github.io/nicebord/)
