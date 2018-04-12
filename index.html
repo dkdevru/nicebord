@@ -74,7 +74,17 @@ title: {{ site.name }}
 <td>Boolean</td>
 <td>false</td>
 <td>Direction of animation, if false the animation occurs along the sides of the element, if true the inside of the element</td>
-</tr></tbody></table>
+</tr>
+
+<tr>
+<td><code>fix</code></td>
+<td>Boolean</td>
+<td>false</td>
+<td>
+Sets the fixed size of the element to which nicebord is applied. Usually images.</td>
+</tr>
+
+</tbody></table>
   
   <h2>Examples</h2>
   <h3>Default</h3>
@@ -199,6 +209,52 @@ title: {{ site.name }}
   <a href="#" class="niced">Link 4</a>
   
   
+  <h3>Use of images</h3>
+  
+  <p>
+If you apply nicebord to images, use the fix parameter to equal the truth
+  </p>
+  
+    <pre>
+  <code class="html">
+ &lt;a href='#' class='aimg'> &lt;img src='./images/100.png'/> &lt;/a>
+ &lt;a href='#' class='aimg'> &lt;img src='./images/100.png'/> &lt;/a>
+  </code>
+  </pre>
+
+         <pre>
+  <code class="javascript">
+  
+    $(document).ready(function(){
+	 
+	$('.aimg').nicebord({
+		color: '#000',
+		orientation: 'ckw',
+		size:5,
+		speed:200,
+		direction:true,
+		fix:true
+		});
+		
+  });
+  
+  </code>
+  </pre>
+  
+  <div class='row'>
+<a href='#' class='aimg'><img src='./images/100.png'/></a>
+<a href='#' class='aimg'><img src='./images/100.png'/></a>
+</div>
+
+<style type="text/css">
+.aimg
+{
+float:left;
+margin:10px;
+}
+</style>
+
+  
    <script type="text/javascript">
   $(document).ready(function(){
 	 $('#first').nicebord();
@@ -227,6 +283,16 @@ title: {{ site.name }}
 			speed:200,
 			direction:true
 			});
+	 
+	 $('.aimg').nicebord({
+			color: '#000',
+			orientation: 'ckw',
+			size:5,
+			speed:200,
+			direction:true,
+			fix:true
+			});
+	 
 	 
   });
   </script>  
