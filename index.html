@@ -219,6 +219,8 @@ If you apply nicebord to images, use the fix parameter to equal the truth
   <code class="html">
  &lt;a href='#' class='aimg'> &lt;img src='./images/100.png'/> &lt;/a>
  &lt;a href='#' class='aimg'> &lt;img src='./images/100.png'/> &lt;/a>
+  &lt;a href='#' class='bimg'> &lt;img src='./images/100.png'/> &lt;/a>
+   &lt;a href='#' class='bimg'> &lt;img src='./images/100.png'/> &lt;/a>
   </code>
   </pre>
 
@@ -236,6 +238,15 @@ If you apply nicebord to images, use the fix parameter to equal the truth
 		fix:true
 		});
 		
+			$('.bimg').nicebord({
+			color: '#000',
+			orientation: 'ckw',
+			size:5,
+			speed:200,
+			direction:false,
+			fix:true
+			});
+		
   });
   
   </code>
@@ -244,11 +255,19 @@ If you apply nicebord to images, use the fix parameter to equal the truth
   <div class='row' style='overflow:auto;'>
 <a href='#' class='aimg'><img src='./images/100.png'/></a>
 <a href='#' class='aimg'><img src='./images/100.png'/></a>
+<a href='#' class='bimg'><img src='./images/100.png'/></a>
+<a href='#' class='bimg'><img src='./images/100.png'/></a>
 </div>
 <div style='clear:both;'/>
 
 <style type="text/css">
 .aimg
+{
+float:left;
+margin:10px;
+}
+
+.bimg
 {
 float:left;
 margin:10px;
@@ -291,6 +310,15 @@ margin:10px;
 			size:5,
 			speed:200,
 			direction:true,
+			fix:true
+			});
+	 
+	 $('.bimg').nicebord({
+			color: '#000',
+			orientation: 'ckw',
+			size:5,
+			speed:200,
+			direction:false,
 			fix:true
 			});
 	 
