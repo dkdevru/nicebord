@@ -37,7 +37,8 @@ $(document).ready(function(){
 		pos:'bottom',
 		speed:500,
 		direction:false,
-		fix:false
+		fix:false,
+		center:false
 		});
 });
 </script>
@@ -54,7 +55,8 @@ $('#id').nicebord({
 		pos:'bottom',
 		speed:500,
 		direction:false,
-		fix:false
+		fix:false,
+		center:false
 		});
 ```
 | Attribute | Type | Default | Description
@@ -66,6 +68,7 @@ $('#id').nicebord({
 | `speed` | Number | 500 | Animation time |
 | `direction` | Boolean | false | Direction of animation, if false the animation occurs along the sides of the element, if true the inside of the element  |
 | `fix` | Boolean | false | Sets the fixed size of the element to which nicebord is applied. Usually images.  |
+| `center` | Boolean | false | Begins animation from the center of the block.  |
 
 
 ## Demo

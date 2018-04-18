@@ -38,11 +38,11 @@ margin:10px;
 $(document).ready(function(){
 	$('#first').nicebord({
 		color: '#000',
-		orientation: 'ckw',
+		orientation: 'ackw',
 		size:5,
-		pos:'top,bottom',
 		speed:200,
-		direction:true
+		direction:true,
+		center:true
 		});
 	
 	$('.nice').nicebord({
@@ -58,8 +58,9 @@ $(document).ready(function(){
 		orientation: 'ckw',
 		size:5,
 		speed:200,
-		direction:true,
-		fix:true
+		direction:false,
+		fix:true,
+		center:true
 		});
 });
 </script>
