@@ -103,6 +103,8 @@ Sets the fixed size of the element to which nicebord is applied. Usually images.
   </pre>
 
  <a href="#" id="first">Nicebord</a>
+  <a href="#" id="second">Nicebord</a>
+   <a href="#" id="third">Nicebord</a>
 
 
   
@@ -168,11 +170,11 @@ Sets the fixed size of the element to which nicebord is applied. Usually images.
   </code>
   </pre>
   
-    <ul style="list-style:none;">
-   <li style="padding:15px;padding-left:25px;"><a href="#" class="nicev">Vertical menu Link 1</a></li>
-   <li style="padding:15px;padding-left:25px;"><a href="#" class="nicev">Vertical menu Link 2</a></li>
-   <li style="padding:15px;padding-left:25px;"><a href="#" class="nicev">Vertical menuLink 3</a></li>
-   <li style="padding:15px;padding-left:25px;"><a href="#" class="nicev">Vertical menuLink 4</a></li>
+    <ul style="list-style:none;padding:0px;margin:0px;">
+   <li><a href="#" class="nicev" style="padding: 0px 10px;">Vertical menu Link 1</a></li>
+   <li><a href="#" class="nicev" style="padding: 0px 10px;">Vertical menu Link 2</a></li>
+   <li><a href="#" class="nicev" style="padding: 0px 10px;">Vertical menu Link 3</a></li>
+   <li><a href="#" class="nicev" style="padding: 0px 10px;">Vertical menu Link 4</a></li>
   </ul>
   
   <h3>Inner direction menu</h3>
@@ -278,6 +280,23 @@ margin:10px;
    <script type="text/javascript">
   $(document).ready(function(){
 	 $('#first').nicebord();
+	 
+	 $('#second').nicebord({
+			color: '#567482',
+			orientation: 'ckw',
+			size:3,
+			pos:'top,bottom',
+			speed:300
+			});
+	 
+	 $('#third').nicebord({
+			color: '#567482',
+			orientation: 'ckw',
+			size:3,
+			pos:'top,left',
+			speed:300
+			});
+	 
 	 
 	 $('.nice').nicebord({
 			color: '#567482',
