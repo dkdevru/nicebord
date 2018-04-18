@@ -84,6 +84,14 @@ title: {{ site.name }}
 Sets the fixed size of the element to which nicebord is applied. Usually images.</td>
 </tr>
 
+<tr>
+<td><code>center</code></td>
+<td>Boolean</td>
+<td>false</td>
+<td>
+Begins animation from the center of the block.</td>
+</tr>
+
 </tbody></table>
   
   <h2>Examples</h2>
@@ -105,6 +113,7 @@ Sets the fixed size of the element to which nicebord is applied. Usually images.
  <a href="#" id="first">Nicebord</a>
   <a href="#" id="second">Nicebord</a>
    <a href="#" id="third">Nicebord</a>
+   <a href="#" id="fourth">Nicebord</a>
 
 
   
@@ -210,6 +219,42 @@ Sets the fixed size of the element to which nicebord is applied. Usually images.
   <a href="#" class="niced">Link 3</a>
   <a href="#" class="niced">Link 4</a>
   
+    <h3>Center option</h3>
+  
+    <p>
+If, you want the animation to start in the center of the block, use the Center option
+  </p>
+  
+  <pre>
+  <code class="html">
+  &lt;a href="#" class="nice_cen">Link 1&lt;/a>
+  &lt;a href="#" class="nice_cen">Link 2&lt;/a>
+  &lt;a href="#" class="nice_cen">Link 3&lt;/a>
+  &lt;a href="#" class="nice_cen">Link 4&lt;/a>
+  </code>
+  </pre>
+  
+         <pre>
+  <code class="javascript">
+  $(document).ready(function(){
+	 
+	 $('.nice_cen').nicebord({
+			color: '#567482',
+			orientation: 'ckw',
+			size:5,
+			speed:200,
+			center:true
+			});
+		
+  });
+  </code>
+  </pre>
+  
+    <a href="#" class="nice_cen">Link 1</a>
+  <a href="#" class="nice_cen">Link 2</a>
+  <a href="#" class="nice_cen">Link 3</a>
+  <a href="#" class="nice_cen">Link 4</a>
+  
   
   <h3>Use of images</h3>
   
@@ -297,6 +342,22 @@ margin:10px;
 			speed:300
 			});
 	 
+	 
+	 $('#fourth').nicebord({
+			color: '#567482',
+			orientation: 'ckw',
+			size:5,
+			speed:300,
+			center: true
+			});
+	 
+	 $('#nice_cen').nicebord({
+			color: '#567482',
+			orientation: 'ckw',
+			size:5,
+			speed:300,
+			center: true
+			});
 	 
 	 $('.nice').nicebord({
 			color: '#567482',
