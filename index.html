@@ -114,6 +114,7 @@ Begins animation from the center of the block.</td>
   <a href="#" id="second">Nicebord</a>
    <a href="#" id="third">Nicebord</a>
    <a href="#" id="fourth">Nicebord</a>
+   <a href="#" id="fifth">Nicebord</a>
 
 
   
@@ -268,6 +269,8 @@ If you apply nicebord to images, use the fix parameter to equal the truth
  &lt;a href='#' class='aimg'> &lt;img src='./images/100.png'/> &lt;/a>
   &lt;a href='#' class='bimg'> &lt;img src='./images/100.png'/> &lt;/a>
    &lt;a href='#' class='bimg'> &lt;img src='./images/100.png'/> &lt;/a>
+     &lt;a href='#' class='cimg'> &lt;img src='./images/100.png'/> &lt;/a>
+   &lt;a href='#' class='cimg'> &lt;img src='./images/100.png'/> &lt;/a>
   </code>
   </pre>
 
@@ -293,6 +296,16 @@ If you apply nicebord to images, use the fix parameter to equal the truth
 			direction:false,
 			fix:true
 			});
+			
+			$('.cimg').nicebord({
+		color: '#000',
+		orientation: 'ckw',
+		size:5,
+		speed:200,
+		direction:false,
+		fix:true,
+		center:true
+		});
 		
   });
   
@@ -304,6 +317,8 @@ If you apply nicebord to images, use the fix parameter to equal the truth
 <a href='#' class='aimg'><img src='./images/100.png'/></a>
 <a href='#' class='bimg'><img src='./images/100.png'/></a>
 <a href='#' class='bimg'><img src='./images/100.png'/></a>
+<a href='#' class='cimg'><img src='./images/100.png'/></a>
+<a href='#' class='cimg'><img src='./images/100.png'/></a>
 </div>
 <div style='clear:both;'/>
 
@@ -349,6 +364,15 @@ margin:10px;
 			size:5,
 			speed:300,
 			center: true
+			});
+	 
+	  $('#fifth').nicebord({
+			color: '#3b5a92',
+			orientation: 'ackw',
+			size:2,
+			pos:'left,right',
+			speed:300,
+			direction:true
 			});
 	 
 	 $('.nice_cen').nicebord({
@@ -400,6 +424,16 @@ margin:10px;
 			speed:200,
 			direction:false,
 			fix:true
+			});
+	 
+	 $('.cimg').nicebord({
+			color: '#000',
+			orientation: 'ckw',
+			size:5,
+			speed:200,
+			direction:false,
+			fix:true,
+			center:true
 			});
 	 
 	 
