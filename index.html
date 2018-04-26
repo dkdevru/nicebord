@@ -318,7 +318,6 @@ If you apply nicebord to images, use the fix parameter to equal the truth
 <a href='#' class='bimg'><img src='./images/100.png'/></a>
 <a href='#' class='bimg'><img src='./images/100.png'/></a>
 <a href='#' class='cimg'><img src='./images/100.png'/></a>
-<a href='#' class='cimg'><img src='./images/100.png'/></a>
 </div>
 <div style='clear:both;'/>
 
@@ -330,6 +329,12 @@ margin:10px;
 }
 
 .bimg
+{
+float:left;
+margin:10px;
+}
+
+.cimg
 {
 float:left;
 margin:10px;
@@ -372,7 +377,8 @@ margin:10px;
 			size:2,
 			pos:'left,right',
 			speed:300,
-			direction:true
+			direction:false,
+			center:true
 			});
 	 
 	 $('.nice_cen').nicebord({
